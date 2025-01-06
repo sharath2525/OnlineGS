@@ -21,10 +21,8 @@ namespace OnlineGS.Models
         [Required,Compare("Password",ErrorMessage ="Password do not match")]
         public required string ConfirmPassword { get; set; }
 
-
-
-        [Required]
-        public required string Role {  get; set; }
+        public User User { get; set; }
+        public int UserId { get; set; }
 
 
     }

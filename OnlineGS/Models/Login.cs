@@ -2,6 +2,11 @@
 
 namespace OnlineGS.Models
 {
+    public enum UserRole
+    {
+        Customer,
+        Admin
+    }
     public class Login
     {
         [Required,EmailAddress(ErrorMessage ="Email is required ")]
@@ -11,7 +16,10 @@ namespace OnlineGS.Models
         public required string Password { get; set; }
 
         [Required(ErrorMessage ="Role is required")]
-        public string Role { get; set; }
+        public UserRole Role { get; set; }
+
+        public User User { get; set; }
+        public int UserId { get; set;  }
 
     }
 }

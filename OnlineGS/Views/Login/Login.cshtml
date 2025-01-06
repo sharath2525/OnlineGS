@@ -28,10 +28,7 @@
 
             <div class="form-group">
                 <label asp-for="Role"></label>
-                <select asp-for="Role" class="form-control">
-                    <option>Customer</option>
-                    <option>Admin</option>
-                </select>
+                <select asp-for="Role" class="form-control" asp-items="Html.GetEnumSelectList<OnlineGS.Models.UserRole>()" ></select>
                 <span asp-validation-for="Role" class="text-danger"></span>
             </div>
 

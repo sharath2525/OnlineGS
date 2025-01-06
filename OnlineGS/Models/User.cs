@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace OnlineGS.Models
+
 {
     public class User
     {
@@ -18,6 +19,8 @@ namespace OnlineGS.Models
 
         [Required(ErrorMessage = "Role is required.")]
         public required string Role { get; set; }
+
+        public ICollection<Order> Orders { get; set; }
 
     }
 }
