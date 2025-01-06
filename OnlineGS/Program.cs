@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using OnlineGS.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<GroceryDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineGS")));
 
 var app = builder.Build();
 
