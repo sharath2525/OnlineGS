@@ -4,7 +4,7 @@ namespace OnlineGS.Controllers
 {
     public class CartController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Cart()
         {
             return View();
         }

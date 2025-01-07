@@ -17,12 +17,7 @@
 </head>
 <body>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="person-circle" viewBox="0 0 16 16">
-            <path d="M13.468 12.37C12.757 11.226 11.194 10 8 10s-4.757 1.225-5.468 2.37A7 7 0 1 1 13.468 12.37zM8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-        </symbol>
 
-    </svg>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Grocery Store</a>
@@ -54,16 +49,14 @@
                     </div>
                 </form>
                 <div>
-                    <a href="#" class="text-white ms-3">
+                    <a href="@Url.Action("Cart","Cart")" class="text-white ms-3">
                         <i class='bx bx-cart bx-md'></i>
 
                     </a>
 
                 </div>
-                <a href="#" class="text-white ms-3">
-                    <svg class="bi" width="40" height="40" fill="currentColor">
-                        <use xlink:href="#person-circle" />
-                    </svg>
+                <a href="@Url.Action("Login","Login")"  class="text-white ms-3">
+                    <i class='bx bxs-user-account bx-md'></i>
                 </a>
 
             </div>
